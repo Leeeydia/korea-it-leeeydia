@@ -1,23 +1,38 @@
 package org.example;
-public class Main{
-    public static void main( String[] args) {
+class Main {
+    public static void main(String[] args) {
+        int 결과;
 
-        계산기.합( 10,  20);
-        계산기.합( 30, 40);
-        계산기.합( 40, 30);
-        // 계산기.합(true,10) ..타입
-        // 계산기.합(10,200,30); .. 개수
-        // 계산기.합(10); .. 개수
+        결과 = 계산기.합(10, 20);
+        System.out.println("결과 : " + 결과);
+        // 출력 => 결과 : 30
+
+        결과 = 계산기.합(30, 20);
+        System.out.println("결과 : " + 결과);
+        // 출력 => 결과 : 50
+
+        결과 = 계산기.합(30, 70);
+        System.out.println("결과 : " + 결과);
+        // 출력 => 결과 : 100
+
+        결과 = 계산기.차(30, 70);
+        System.out.println("결과 : " + 결과);
+        // 출력 => 결과 : -40
+
+        결과 = 계산기.곱(3, 7);
+        System.out.println("결과 : " + 결과);
+        // 출력 => 결과 : 21
+
     }
 }
+
 class 계산기{
-    static void 합(int a, int b){
-        System.out.println("a : "+a);
-        System.out.println("b : "+b);
-        System.out.println(a+b);
-    }
+    int 결과;
+    static void 합(){}
+    static void 차(){}
+    static void 곱(){}
+}
 
 
-    };
 
 // 메소드 오버로딩
