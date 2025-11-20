@@ -1,38 +1,39 @@
 package org.example;
+
+import java.awt.*;
+import java.util.Arrays;
+
 class Main {
     public static void main(String[] args) {
-        int 결과;
+        String msg = greet("Jin"); /// 문자열만 담을 수 있는 변수 msg에 greet 함수 실행 결과를 넣는다.
+        System.out.println(msg); /// Jin -> 인자
+// greet() -> return 값인 "Hello" + Jin + "!" 출력
 
-        결과 = 계산기.합(10, 20);
-        System.out.println("결과 : " + 결과);
-        // 출력 => 결과 : 30
+        Point point = createPoint(5, 10); /// Point 모양의 객체랑 연결 할 point 변수
+        System.out.println("Point create at (" + point.x + ", " + point.y + ")");
+// create() -> return 값 x,y 그대로 출력
+/// new Point 5,10
+        int[] evens = firstNEvenNumbers(5);
+        System.out.println("first 5 even numbers : " + Arrays.toString(evens));
+    }
 
-        결과 = 계산기.합(30, 20);
-        System.out.println("결과 : " + 결과);
-        // 출력 => 결과 : 50
+    public static String greet(String name) {  /// 문자열 매개변수 1개 바든 greet 함수 선언
+        return "Hello, " + name + "!";
+    }
 
-        결과 = 계산기.합(30, 70);
-        System.out.println("결과 : " + 결과);
-        // 출력 => 결과 : 100
 
-        결과 = 계산기.차(30, 70);
-        System.out.println("결과 : " + 결과);
-        // 출력 => 결과 : -40
+    public static Point createPoint(int x, int y) {
+        return new Point(x, y);
+    }
 
-        결과 = 계산기.곱(3, 7);
-        System.out.println("결과 : " + 결과);
-        // 출력 => 결과 : 21
+    public static int[] firstNEvenNumbers(int n) {
+        int[] evenNumbers = new int[n];
 
+        for (int i = 0, num = 2; i < n; i++, num += 2) {
+            evenNumbers[i] = num;
+        }
+        return evenNumbers;
     }
 }
 
-class 계산기{
-    int 결과;
-    static void 합(){}
-    static void 차(){}
-    static void 곱(){}
-}
-
-
-
-// 메소드 오버로딩
+// 2의 배수만큼 증가                   vb
