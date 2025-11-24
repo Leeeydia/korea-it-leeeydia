@@ -1,18 +1,29 @@
 package org.example;
 
+// 문제 : 매개변수를 사용해서 전사가 매번 다르게 공격하도록 해주세요.
+
 class Main {
     public static void main(String[] args) {
-        무기 a무기 = new 칼();
-        a무기.공격();
-        // 출력 : 칼로 공격합니다.
+        전사 a전사 = new 전사();
+
+        a전사.공격("브라이언", "칼");
+
+        // 브라이언이(가) 칼(으)로 공격합니다.
+
+        a전사.공격("필립", "창");
+
+        // 필립이(가) 창(으)로 공격합니다.
+
+        a전사.공격("마크", "지팡이");
+
+        // 마크(가) 지팡이(으)로 공격합니다.
     }
 }
 
-class 무기 {
-    void 공격(){}
+class 전사 {
+    void 공격(String 이름, String 무기) {
+        System.out.println(이름 + "이(가)" + 무기 + "(으)로 공격합니다");
+    }
 }
-class 칼 extends 무기{
-void 공격(){
-    System.out.println("칼로 공격합니다");
-}
-}
+
+//28강 계산기 문제 복습
