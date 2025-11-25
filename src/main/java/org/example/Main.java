@@ -1,30 +1,24 @@
 package org.example;
 
-// 문제 : 자동차 리모콘이 페라리 객체를 가리키게 한 후 해당 리모콘이 가리키고 있는 객체를 다시 페라리 리모콘으로 가리키게(참조하게) 하는 코드를 작성해주세요.
+// 문제 : 아래가 실행되도록 해주세요.
 
 class Main {
     public static void main(String[] args) {
-        자동차 a자동차 = new 자동차();
-        페라리 a페라리 = new 페라리();
+        사람 a사람 = new 사람();
 
-        a자동차.달리다();
-        a자동차.서다();
-        a페라리.뚜껑이_열리다();
+        a사람.나이 = 20;
+        a사람.a왼팔 = new 팔();
+        a사람.a왼팔.길이=10;
 
     }
 }
 
-class 자동차 {
-    void 달리다() {
-    }
-
-    void 서다() {
-    }
+class 사람 {
+    // 클래스안에 변수를 정의 할 수 있다.
+    int 나이;
+    팔 a왼팔;
 }
 
-class 페라리 extends 자동차 {
-    void 뚜껑이_열리다() {
-        System.out.println("페라리 뚜껑 열리다");
-    }
-
+class 팔 {
+    int 길이;
 }
