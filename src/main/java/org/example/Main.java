@@ -1,68 +1,43 @@
 package org.example;
 
-// 문제 : 아래가 실행되도록 해주세요.
-
-class Main {
+public class Main {
     public static void main(String[] args) {
-        전사 a전사 = new 전사();
 
-        String 이름 = "칸";
-        a전사.이름 = 이름;
-        a전사.나이 = 20;
-        a전사.자기소개();
+        int[] arr = new int[10];
 
-        a전사.나이++;
-        a전사.자기소개();
+        Article[] articles = new Article[10];
 
-        a전사.나이 = 30;
-        a전사.이름 = "카니";
-        a전사.자기소개();
+        Article article1 = new Article();
+        articles[0] = article1;
 
-        a전사.a무기 = new 활();
-        a전사.공격();
-        // 출력 : 카니가 활로 공격합니다.
+        Article article2 = new Article();
+        articles[1] = article2;
 
-        a전사.a무기 = new 칼();
-        a전사.공격();
-        // 출력 : 카니가 칼로 공격합니다.
+        System.out.println(article1.id);
+        System.out.println(article2.id);
 
-        a전사.a무기 = new 칼();
-        a전사.이름 = "철수";
-        a전사.공격();
-        // 출력 : 철수가 칼로 공격합니다.
+        System.out.println(articles[0].id);
+        System.out.println(articles[1].id);
     }
 }
 
-class 전사 {
-    // 인스턴스 변수
-    String 이름;
-    // 인스턴스 변수
-    int 나이;
-    // 인스턴스 변수
-    무기 a무기;
+class Article {
+    static int lastId;
 
-    void 공격() {
-        a무기.작동(this.이름);
+    int id;
+    String regDate;
+
+    static {
+        lastId = 0;
     }
 
-    void 자기소개() {
-        System.out.println("안녕하세요. 저는 " + this.나이 + "살 " + this.이름 + " 입니다.");
+    Article() {
+        this(lastId+1,"2025-12-12 12:12:12"); // 다른 생성자 호출(실행), Constructor Call
+        lastId++;
     }
-}
 
-class 무기 {
-    void 작동(String 공격자_이름) {
-    }
-}
-
-class 칼 extends 무기 {
-    void 작동(String 공격자_이름) {
-        System.out.println(공격자_이름 + "가 칼로 공격합니다.");
-    }
-}
-
-class 활 extends 무기 {
-    void 작동(String 공격자_이름) {
-        System.out.println(공격자_이름 + "가 활로 공격합니다.");
+    Article(int id, String regDate) {
+        this.id = id;
+        this.regDate = regDate;
     }
 }
