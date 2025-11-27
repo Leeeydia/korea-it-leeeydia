@@ -5,8 +5,13 @@
 
 package org.example;
 
+import java.util.ArrayList;
+
 class Main {
     public static void main(String[] args) {
+
+
+        ArrayList<String>사람 = new ArrayList<>();
         사람인력관리소 a사람인력관리소 = new 사람인력관리소();
 
         a사람인력관리소.add사람("홍길순", 33);
@@ -34,7 +39,11 @@ class 사람인력관리소 {
     int i;
 
     void add사람(String 이름, int 나이) {
-        this.i++;
+//        사람 a사람 = new 사람();
+//        a사람.번호 = this.i + 1;
+//        a사람.이름 = 이름;
+//        a사람.나이 = 나이;
+
         System.out.println("나이가 " + 나이 + "살인 " + 3 + "번째 사람(" + 이름 + ")이 추가되었습니다.");
     }
 
@@ -45,7 +54,14 @@ class 사람인력관리소 {
 
 
 class 사람 {
+//int 번호;
+//int 나이;
+//String 이름;
+
     void 자기소개() {
 
     }
 }
+
+
+//System.out.println("나이가 " + 나이 + "살인 " + 3 + "번째 사람(" + 이름 + ")이 추가되었습니다.");
