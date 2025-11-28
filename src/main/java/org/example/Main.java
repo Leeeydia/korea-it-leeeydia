@@ -76,32 +76,113 @@ class Main {
         // 공백 - 별
 
         //피라미드
-        for (int i = 1; i <= n; i++) {
-            // 공백
-            for (int j=1; j<=n-i; j++) {
-                System.out.print(" ");
-            }
-            // 별
-            for(int j=1; j<=2*i-1; j++ ){
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+//        for (int i = 1; i <= n; i++) {
+//            // 공백
+//            for (int j=1; j<=n-i; j++) {
+//                System.out.print(" ");
+//            }
+//            // 별
+//            for(int j=1; j<=2*i-1; j++ ){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+//
+//        // 역삼각형
+//        for(int i= n-1; i>=1; i--){
+//            // 공백
+//            for(int j=1; j<= n-i; j++){
+//                System.out.print(" ");
+//            }
+//            // 별
+//            for(int j=1; j<=2*i-1; j++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
 
-        // 역삼각형
-        for(int i= n-1; i>=1; i--){
-            // 공백
-            for(int j=1; j<= n-i; j++){
-                System.out.print(" ");
-            }
-            // 별
-            for(int j=1; j<=2*i-1; j++){
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+        // 피라미드 응용
+        // 속이 빈 피라미드
 
+//        for (int i = 1; i <= n; i++) {
+//
+//            // 공백
+//            for (int j = 1; j <= n - i; j++) {
+//                System.out.print(" ");
+//            }
+//            // 별
+//            System.out.print("*");
+//
+//            // 중간 공백
+//            for (int j = 1; j <= 2 * i - 3; j++) {
+//                System.out.print(" ");
+//            }
+        // 별
+//            if (i > 1) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
 
+        // 속이 빈 피라미드 (역삼각형)
+
+//        for (int i = n - 1; i >= 1; i--) {
+//            // 공
+//            for (int j = 1; j <= n - i; j++) {
+//                System.out.print(" ");
+//            }
+//            // 별
+//            System.out.print("*");
+//
+//            //중간
+//            for (int j = 1; j <= 2 * i - 3; j++) {
+//                System.out.print(" ");
+//            }
+//            if (i > 1) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+
+        // 속이 빈 다이아몬드
+
+//        for (int i = 1; i <= n; i++) {
+//            // 공백
+//            for (int j = 1; j <= n - i; j++) {
+//                System.out.print(" ");
+//            }
+//            // 별
+//            System.out.print("*");
+//            // 중간 공백
+//            for (int j = 1; j <= 2 * i - 3; j++) {
+//                System.out.print(" ");
+//            }
+//            if (i > 1) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+//
+//        for (int i = n - 1; i >= 1; i--) {
+//            // 공백
+//            for (int j = 1; j <=n-i; j++){
+//                System.out.print(" ");
+//            }
+//
+//            // 별
+//            System.out.print("*");
+//
+//            // 중간 공백
+//            for(int j=1; j<=2*i-3; j++){
+//                System.out.print(" ");
+//            }
+//
+//            // 별
+//            if (i>1){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
     }
 }
 
